@@ -44,6 +44,8 @@ class LoginActivity : AppCompatActivity() {
         txtForgotPassword = findViewById(R.id.txtForgotPassword)
         txtRegister = findViewById(R.id.txtRegister)
 
+
+
         btnLogin.setOnClickListener {
             val mobileNumber = etMobileNumber.text.toString()
             val password = etPassword.text.toString()
