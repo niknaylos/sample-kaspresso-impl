@@ -8,16 +8,20 @@ import io.github.kakaocup.kakao.edit.KEditText
 import io.github.kakaocup.kakao.text.*
 
 object FastScreen : BaseScreen<FastScreen>() {
-    override val layoutId: Int? = null
-    override val viewClass: Class<*>? = null
 
     private val mobilePhoneInput = KEditText{withId(R.id.etMobileNumber)}
+    private val loginButton = KView{withId(R.id.btnLogin)}
+    private val passwordInput = KEditText{withId(R.id.etPassword)}
 
-    fun clickOnMobilePhoneInput() {
-        mobilePhoneInput.click()
+
+
+    fun typeTextInMobilePhoneInput(phone: String) {
+        mobilePhoneInput.replaceText(phone)
     }
-
-    fun typeTextInMobilePhoneInput() {
-        mobilePhoneInput.replaceText("123456")
+    fun typeTextInPassword(password: String) {
+        passwordInput.replaceText(password)
+    }
+    fun clickOnLoginButton() {
+        loginButton.click()
     }
 }
